@@ -85,9 +85,7 @@ export const config: WebdriverIO.Config = {
                 '--disable-gpu',
                 '--no-sandbox',
                 '--disable-dev-shm-usage',
-                '--disable-extensions',
-                '--remote-debugging-port=9222',
-                '--window-size=1920,1080'
+                '--remote-debugging-port=9222'
             ],
             prefs: {
                 'intl.accept_languages': 'es-ES,es'
