@@ -76,22 +76,7 @@ export const config: WebdriverIO.Config = {
             }
         }
     },
-
-    {
-        browserName: 'MicrosoftEdge',
-        'ms:edgeOptions': {
-            args: [
-                '--headless=new',
-                '--disable-gpu',
-                '--no-sandbox',
-                '--disable-dev-shm-usage',
-                '--remote-debugging-port=9222'
-            ],
-            prefs: {
-                'intl.accept_languages': 'es-ES,es'
-            }
-        }
-    }],
+    ],
 
     //
     // ===================
