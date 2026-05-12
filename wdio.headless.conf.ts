@@ -145,9 +145,9 @@ export const config: WebdriverIO.Config = {
     reporters: [
         'spec',
         ['junit', {
-            outputDir: './test-results/',
-            outputFileFormat: function (options: { cid: any }) {
-                return `results-${options.cid}.xml`
+            outputDir: './test-results',
+            outputFileFormat: function (options: { cid: any; }) {
+                return `results-${options.cid}.xml`;
             }
         }]
     ],
