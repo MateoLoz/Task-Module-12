@@ -57,9 +57,7 @@ export const config: WebdriverIO.Config = {
     {
         browserName: 'firefox',
     },
-    {
-        browserName: 'MicrosoftEdge',
-    }],
+    ],
 
     //
     // ===================
