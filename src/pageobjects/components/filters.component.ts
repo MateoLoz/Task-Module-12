@@ -6,9 +6,12 @@ class FilterComponent {
 
 
     async selectFilter(filter: string) {
-        await this.sortFilter.waitForDisplayed()
-        await this.sortFilter.click();
-        await this.sortFilter.selectByVisibleText(filter);
+        const dropdown = await this.sortFilter;
+
+        await dropdown.waitForExist({ timeout: 10000 });
+        await dropdown.waitForDisplayed({ timeout: 10000 });
+
+        await dropdown.selectByVisibleText(filter);
     }
 }
 

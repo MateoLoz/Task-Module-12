@@ -54,21 +54,44 @@ export const config: WebdriverIO.Config = {
     capabilities: [{
         browserName: 'chrome',
         'goog:chromeOptions': {
-            args: ['--headless=new']
+            args: [
+                '--headless=new',
+                '--window-size=1920,1080'
+            ],
+            prefs: {
+                'intl.accept_languages': 'es-ES,es'
+            }
         }
     },
 
     {
         browserName: 'firefox',
         'moz:firefoxOptions': {
-            args: ['-headless']
+            args: ['-headless'],
+            prefs: {
+                'dom.webnotifications.enabled': false,
+                'media.navigator.enabled': false,
+                'intl.accept_languages': 'es-ES,es',
+                'intl.locale.requested': 'es-ES'
+            }
         }
     },
 
     {
         browserName: 'MicrosoftEdge',
         'ms:edgeOptions': {
-            args: ['--headless=new']
+            args: [
+                '--headless=new',
+                '--disable-gpu',
+                '--no-sandbox',
+                '--disable-dev-shm-usage',
+                '--disable-extensions',
+                '--remote-debugging-port=9222',
+                '--window-size=1920,1080'
+            ],
+            prefs: {
+                'intl.accept_languages': 'es-ES,es'
+            }
         }
     }],
 

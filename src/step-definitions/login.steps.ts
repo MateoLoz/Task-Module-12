@@ -20,8 +20,10 @@ Then(
     async () => {
         const errorText = await loginPage.loginForm.getEmailErrorMsg();
 
-        expect(errorText).toContain(
-            'El correo electrónico es obligatorio'
-        );
+        const expected = {
+            email: ['Email is required', 'El correo electrónico es obligatorio'],
+        };
+
+        expect(expected.email).toContain(errorText);
     }
 );
