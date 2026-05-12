@@ -53,9 +53,25 @@ export const config: WebdriverIO.Config = {
     //
     capabilities: [{
         browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: [
+                '--window-size=1920,1080',
+            ],
+            prefs: {
+                'intl.accept_languages': 'es-ES,es'
+            }
+        }
     },
     {
         browserName: 'firefox',
+        'moz:firefoxOptions': {
+            prefs: {
+                'dom.webnotifications.enabled': false,
+                'media.navigator.enabled': false,
+                'intl.accept_languages': 'es-ES,es',
+                'intl.locale.requested': 'es-ES'
+            }
+        }
     },
     ],
 
